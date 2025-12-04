@@ -1,0 +1,246 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue.tests\\uploadintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|solutionrelative:videocatalogue.tests\\uploadintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\models\\videofileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\models\\videofileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue.tests\\videocatalogue.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|solutionrelative:videocatalogue.tests\\videocatalogue.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue.tests\\uploadvalidatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|solutionrelative:videocatalogue.tests\\uploadvalidatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue.tests\\videofileinfotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{880D4E26-9F2F-40A7-ADEA-9F48ADF2B9EB}|VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj|solutionrelative:videocatalogue.tests\\videofileinfotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|c:\\users\\sorya\\source\\repos\\videocatalogue\\videocatalogue\\models\\uploadvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA822915-3CDF-46EB-9619-84411EC7F9C6}|VideoCatalogue\\VideoCatalogue.csproj|solutionrelative:videocatalogue\\models\\uploadvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Program.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Program.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Program.cs",
+              "RelativeToolTip": "VideoCatalogue\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:18:28.979Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VideoFileInfo.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Models\\VideoFileInfo.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Models\\VideoFileInfo.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Models\\VideoFileInfo.cs",
+              "RelativeToolTip": "VideoCatalogue\\Models\\VideoFileInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:21:02.653Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UploadValidator.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Models\\UploadValidator.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Models\\UploadValidator.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Models\\UploadValidator.cs",
+              "RelativeToolTip": "VideoCatalogue\\Models\\UploadValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:21:50.165Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "VideoCatalogue\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:22:12.588Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MediaController.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Controllers\\MediaController.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Controllers\\MediaController.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Controllers\\MediaController.cs",
+              "RelativeToolTip": "VideoCatalogue\\Controllers\\MediaController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwFkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:22:59.801Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "VideoCatalogue\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAewB8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T08:25:17.587Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "VideoCatalogue\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "VideoCatalogue\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-04T08:26:59.64Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VideoFileInfoTests.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\VideoFileInfoTests.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue.Tests\\VideoFileInfoTests.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\VideoFileInfoTests.cs",
+              "RelativeToolTip": "VideoCatalogue.Tests\\VideoFileInfoTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:37:19.204Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UploadValidatorTests.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\UploadValidatorTests.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue.Tests\\UploadValidatorTests.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\UploadValidatorTests.cs",
+              "RelativeToolTip": "VideoCatalogue.Tests\\UploadValidatorTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:39:31.743Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UploadIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\UploadIntegrationTests.cs",
+              "RelativeDocumentMoniker": "VideoCatalogue.Tests\\UploadIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\UploadIntegrationTests.cs",
+              "RelativeToolTip": "VideoCatalogue.Tests\\UploadIntegrationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:45:50.11Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VideoCatalogue.Tests",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj",
+              "RelativeDocumentMoniker": "VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj",
+              "RelativeToolTip": "VideoCatalogue.Tests\\VideoCatalogue.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-04T09:44:23.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "VideoCatalogue\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sorya\\source\\repos\\VideoCatalogue\\VideoCatalogue\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "VideoCatalogue\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T09:19:06.022Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

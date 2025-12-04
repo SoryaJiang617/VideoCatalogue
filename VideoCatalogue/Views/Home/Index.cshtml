@@ -1,0 +1,396 @@
+﻿@model IEnumerable<VideoCatalogue.Models.VideoFileInfo>
+@{
+    ViewData["Title"] = "Video Catalogue";
+    var currentView = (string)ViewBag.CurrentView ?? "catalogue";
+}
+
+<div class="container py-4">
+    <h1 class="mb-4">Video Catalogue</h1>
+
+    <div class="btn-group mb-3" role="group">
+        <button type="button"
+                class="btn btn-outline-primary"
+                id="btnShowUpload">
+            Upload Videos
+        </button>
+        <button type="button"
+                class="btn btn-outline-primary"
+                id="btnShowCatalogue">
+            View Catalogue
+        </button>
+    </div>
+
+    <!-- Upload View -->
+    <div id="uploadView" class="card mb-3" style="display:none;">
+        <div class="card-header">
+            Upload MP4 Files
+        </div>
+        <div class="card-body">
+            <form id="uploadForm">
+                <div class="mb-3">
+                    <label for="fileInput" class="form-label">Select one or more MP4 files</label>
+                    <input class="form-control" type="file" id="fileInput" name="files" multiple accept=".mp4" />
+                </div>
+
+                <div id="dropZone" class="mb-3 text-muted">
+                    Drag &amp; drop MP4 files here, or use the file picker above.
+                </div>
+
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <div class="mt-3">
+                <span id="uploadStatus" class="text-muted"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catalogue View -->
+    <div id="catalogueView" class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Video Catalogue</span>
+            <div class="d-flex gap-2">
+                <input id="searchInput"
+                       type="text"
+                       class="form-control form-control-sm"
+                       placeholder="Search by file name..." />
+                <button id="btnDeleteAll"
+                        type="button"
+                        class="btn btn-sm btn-outline-danger">
+                    Delete All
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            @if (!Model.Any())
+            {
+                <p class="text-muted">No videos found. Try uploading some MP4 files.</p>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover" id="videoTable">
+                        <thead>
+                            <tr>
+                                <th>File Name</th>
+                                <th>Size</th>
+                                <th style="width: 90px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var video in Model)
+                            {
+                                <tr class="video-row" data-filename="@video.FileName">
+                                    <td>@video.FileName</td>
+                                    <td>@video.FileSizeDisplay</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-danger delete-btn"
+                                                type="button"
+                                                data-filename="@video.FileName">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span id="pageInfo" class="text-muted small"></span>
+                    </div>
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-outline-secondary" id="btnPrevPage">Prev</button>
+                        <button type="button" class="btn btn-outline-secondary" id="btnNextPage">Next</button>
+                    </div>
+                </nav>
+            }
+
+            <div id="playerContainer" class="mt-3" style="display:none;">
+                <h5 id="currentVideoTitle" class="mb-2"></h5>
+                <div class="ratio ratio-16x9">
+                    <video id="videoPlayer"
+                           controls
+                           poster="/img/video-placeholder.png">
+                        <source id="videoSource" src="" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+            const currentView = "@currentView";
+            const uploadView = document.getElementById("uploadView");
+            const catalogueView = document.getElementById("catalogueView");
+            const btnUpload = document.getElementById("btnShowUpload");
+            const btnCatalogue = document.getElementById("btnShowCatalogue");
+            const uploadForm = document.getElementById("uploadForm");
+            const fileInput = document.getElementById("fileInput");
+            const uploadStatus = document.getElementById("uploadStatus");
+            const playerContainer = document.getElementById("playerContainer");
+            const videoPlayer = document.getElementById("videoPlayer");
+            const videoSource = document.getElementById("videoSource");
+            const currentVideoTitle = document.getElementById("currentVideoTitle");
+
+            const videoRows = Array.from(document.querySelectorAll(".video-row"));
+            const searchInput = document.getElementById("searchInput");
+            const btnPrevPage = document.getElementById("btnPrevPage");
+            const btnNextPage = document.getElementById("btnNextPage");
+            const pageInfo = document.getElementById("pageInfo");
+            const btnDeleteAll = document.getElementById("btnDeleteAll");
+
+            const dropZone = document.getElementById("dropZone");
+            let droppedFiles = null;
+
+            // Pagination state
+            let currentPage = 1;
+            const pageSize = 10;
+            let filteredRows = videoRows.slice();
+
+            function showUpload() {
+                uploadView.style.display = "block";
+                catalogueView.style.display = "none";
+            }
+
+            function showCatalogue() {
+                uploadView.style.display = "none";
+                catalogueView.style.display = "block";
+            }
+
+            if (currentView === "upload") {
+                showUpload();
+            } else {
+                showCatalogue();
+            }
+
+            btnUpload.addEventListener("click", function () {
+                showUpload();
+            });
+
+            btnCatalogue.addEventListener("click", function () {
+                showCatalogue();
+            });
+
+            //  Drag & Drop
+            if (dropZone) {
+                const preventDefaults = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                };
+
+                ["dragenter", "dragover"].forEach(eventName => {
+                    dropZone.addEventListener(eventName, function (e) {
+                        preventDefaults(e);
+                        dropZone.classList.add("drag-over");
+                    });
+                });
+
+                ["dragleave", "drop"].forEach(eventName => {
+                    dropZone.addEventListener(eventName, function (e) {
+                        preventDefaults(e);
+                        dropZone.classList.remove("drag-over");
+                    });
+                });
+
+                dropZone.addEventListener("drop", function (e) {
+                    droppedFiles = e.dataTransfer.files;
+                    if (droppedFiles && droppedFiles.length > 0) {
+                        uploadStatus.textContent = droppedFiles.length + " file(s) ready to upload via drag & drop.";
+                        uploadStatus.className = "text-muted";
+                    }
+                });
+
+                // dropZone trigger fileInput
+                dropZone.addEventListener("click", function () {
+                    fileInput.click();
+                });
+            }
+
+            // upload submit
+            if (uploadForm) {
+                uploadForm.addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    uploadStatus.textContent = "";
+
+                    const files = (droppedFiles && droppedFiles.length > 0)
+                        ? droppedFiles
+                        : fileInput.files;
+
+                    if (!files || files.length === 0) {
+                        uploadStatus.textContent = "Please select at least one MP4 file.";
+                        uploadStatus.className = "text-danger";
+                        return;
+                    }
+
+                    const formData = new FormData();
+                    for (let i = 0; i < files.length; i++) {
+                        const file = files[i];
+                        if (!file.name.toLowerCase().endsWith(".mp4")) {
+                            uploadStatus.textContent = "Only .mp4 files are allowed.";
+                            uploadStatus.className = "text-danger";
+                            return;
+                        }
+                        formData.append("files", file);
+                    }
+
+                    uploadStatus.textContent = "Uploading...";
+                    uploadStatus.className = "text-muted";
+
+                    try {
+                        const response = await fetch("/api/media/upload", {
+                            method: "POST",
+                            body: formData
+                        });
+
+                        if (!response.ok) {
+                            const errorText = await response.text();
+                            uploadStatus.textContent = "Upload failed: " + errorText;
+                            uploadStatus.className = "text-danger";
+                            return;
+                        }
+
+                        uploadStatus.textContent = "Upload successful. Redirecting to catalogue...";
+                        uploadStatus.className = "text-success";
+
+                        window.location.href = "/Home/Index?view=catalogue";
+                    } catch (err) {
+                        console.error(err);
+                        uploadStatus.textContent = "An error occurred while uploading.";
+                        uploadStatus.className = "text-danger";
+                    }
+                });
+            }
+
+            function applyFilter() {
+                const term = (searchInput?.value || "").trim().toLowerCase();
+
+                filteredRows = videoRows.filter(row => {
+                    const name = (row.getAttribute("data-filename") || "").toLowerCase();
+                    return !term || name.includes(term);
+                });
+
+                currentPage = 1;
+                renderPage();
+            }
+
+            function renderPage() {
+                // hidden
+                videoRows.forEach(row => row.style.display = "none");
+
+                if (filteredRows.length === 0) {
+                    pageInfo.textContent = "No videos.";
+                    return;
+                }
+
+                const totalPages = Math.ceil(filteredRows.length / pageSize);
+                if (currentPage > totalPages) currentPage = totalPages;
+
+                const start = (currentPage - 1) * pageSize;
+                const end = start + pageSize;
+                const pageRows = filteredRows.slice(start, end);
+
+                pageRows.forEach(row => row.style.display = "table-row");
+
+                pageInfo.textContent = `Showing ${start + 1}-${Math.min(end, filteredRows.length)} of ${filteredRows.length}`;
+
+                btnPrevPage.disabled = currentPage === 1;
+                btnNextPage.disabled = currentPage === totalPages;
+            }
+
+            if (searchInput && btnPrevPage && btnNextPage && pageInfo) {
+                searchInput.addEventListener("input", function () {
+                    applyFilter();
+                });
+
+                btnPrevPage.addEventListener("click", function () {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderPage();
+                    }
+                });
+
+                btnNextPage.addEventListener("click", function () {
+                    const totalPages = Math.ceil(filteredRows.length / pageSize);
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderPage();
+                    }
+                });
+
+                applyFilter();
+            }
+
+            // play video
+            function attachRowClickHandlers() {
+                videoRows.forEach(function (row) {
+                    row.addEventListener("click", function (e) {
+                        if (e.target && e.target.classList.contains("delete-btn")) {
+                            return;
+                        }
+
+                        const fileName = row.getAttribute("data-filename");
+                        if (!fileName) return;
+
+                        const src = "/media/" + encodeURIComponent(fileName);
+                        videoSource.src = src;
+                        videoPlayer.load();
+                        videoPlayer.play();
+
+                        currentVideoTitle.textContent = fileName;
+                        playerContainer.style.display = "block";
+                    });
+                });
+            }
+
+            attachRowClickHandlers();
+
+            // delete
+            async function deleteFile(fileName) {
+                if (!confirm(`Delete '${fileName}'?`)) return;
+
+                const url = "/api/media/delete?fileName=" + encodeURIComponent(fileName);
+                const response = await fetch(url, { method: "DELETE" });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    alert("Failed to delete file: " + errorText);
+                    return;
+                }
+
+                // refresh
+                window.location.reload();
+            }
+
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+            deleteButtons.forEach(btn => {
+                btn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    const fileName = btn.getAttribute("data-filename");
+                    if (fileName) {
+                        deleteFile(fileName);
+                    }
+                });
+            });
+
+            if (btnDeleteAll) {
+                btnDeleteAll.addEventListener("click", async function () {
+                    if (!confirm("Delete all videos?")) return;
+
+                    const response = await fetch("/api/media/deleteAll", { method: "DELETE" });
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        alert("Failed to delete all videos: " + errorText);
+                        return;
+                    }
+
+                    window.location.reload();
+                });
+            }
+        })();
+    </script>
+}
