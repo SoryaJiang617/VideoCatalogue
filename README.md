@@ -36,3 +36,28 @@ I tried to keep the UI simple and clean, and focus more on correct behaviour and
 
 ## Project Structure
 
+VideoCatalogue.sln
+│
+├── VideoCatalogue/ # Main ASP.NET Core MVC project
+│ ├── Controllers/
+│ ├── Views/
+│ ├── wwwroot/media/ # Uploaded video storage
+│ └── appsettings.json
+│
+└── VideoCatalogue.Tests/ # xUnit test project
+
+---
+
+```bash
+git clone https://github.com/SoryaJiang617/VideoCatalogue.git
+cd VideoCatalogue
+dotnet run --project VideoCatalogue
+Open the browser:
+
+http://localhost:7215
+
+You can start uploading and playing videos immediately.
+
+Run Automated Tests
+cd VideoCatalogue.Tests
+dotnet test
