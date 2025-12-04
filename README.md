@@ -52,12 +52,11 @@ VideoCatalogue.sln
 git clone https://github.com/SoryaJiang617/VideoCatalogue.git
 cd VideoCatalogue
 dotnet run --project VideoCatalogue
-Open the browser:
-
-http://localhost:7215
+Then open the URL printed in console (e.g. http://localhost:7215 — port may vary).
 
 You can start uploading and playing videos immediately.
 
 Run Automated Tests
 cd VideoCatalogue.Tests
 dotnet test
+
